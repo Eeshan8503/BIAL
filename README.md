@@ -25,9 +25,9 @@
 # User Point of view towards the application
 ### The user will be offered two options in his dashboard of the app
 			
-1. 			Generate a QR code for his/her baggage: The User can create a QR code for his luggage and stick over it
-2. 			Scan a QR code on the baggage found by him/her: If a user finds a baggage in the vicinity, he/she can scan the QR code notifying the owner about his luggage where -abouts
-3. 			 Send a notification about a lost baggage: The user will also have an option to intimate the relevant airline staff and airport authorities about their lost baggage and the authorities can follow a similar protocol of scanning the QR code and solve the issue
+1. Generate a QR code for his/her baggage: The User can create a QR code for his luggage and stick over it
+2. Scan a QR code on the baggage found by him/her: If a user finds a baggage in the vicinity, he/she can scan the QR code notifying the owner about his luggage where -abouts
+3. Send a notification about a lost baggage: The user will also have an option to intimate the relevant airline staff and airport authorities about their lost baggage and the authorities can follow a similar protocol of scanning the QR code and solve the issue
 # Result
 -	A collective sense of responsibility can inculcate in the society wherein everybody can help everyone by doing nothing but scan a QR code.
 ### Might be concerns about the application:
