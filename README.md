@@ -23,7 +23,7 @@
 - Relevant **machine learning and artificial intelligence can later be implemented** helping the passengers even more like predicting cancellation chances of flights.
 
 # User Point of view towards the application
-### The user will be offered primirily three options in his dashboard of the app
+### The user will be offered primarily three options in his dashboard of the app
 			
 1. Generate a QR code for his/her baggage: The User can create a QR code for his luggage and stick over it
 2. Scan a QR code on the baggage found by him/her: If a user finds a baggage in the vicinity, he/she can scan the QR code notifying the owner about his luggage where -abouts
