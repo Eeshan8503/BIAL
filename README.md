@@ -1,62 +1,34 @@
-# BIAL Genie App For Passenger Services
+# Team Description
+ 1. Eeshan Mattey [GitHub](https://github.com/Eeshan8503) [LinkedIn](https://linkedin.com/in/eeshan-mattey-1676741b7)
+ 2. Rhythm Shandlya [GitHub](https://github.com/rhythmshandlya) [LinkedIn](https://linkedin.com/in/rhythm-shandlya-a1a949201)
 
-## Team Description
- 1. Eeshan Mattey [GitHub]() [LinkedIn]()
- 2. Rhythm Shandlya [GitHub]() [LinkedIn]()
-
-## Video Pitch
-
-
-## Problems Passengers Run Into At Airports.
-
-1. **TROUBLE WITH BAGGAGE**: Lost baggage is a common complaint people have at airport. There is a lot of pressure on the current, outdated baggage handling system, which is why airports need to start looking into more modern baggage solutions.
-
-2. **DIFFICULTY IN NAVIGATION**: The main, obvious problem that can happen in the larger airports is that it's far too easy to get lost. Some airports have multiple terminals, with gates spanning in every direction, and finding your gate can often seem like a daunting task for those who are directionally challenged.
-
-3. **FIRST TIME PASSENGERS**: India is a developing nation, there will come new passengers every day who are unaware of airport check-in process. Its responsibility of the airport to help them out.
-
-4. **FLIGHT DELAYS AND CANCELLATION**: Passengers complaining that they aren’t kept informed of flight cancellation and delays. There’s nothing more frustrating for a passenger, than turning up early and waiting around for hours, only to discover at the last minute there’s been a delay or change in the flight schedule.
-
-5. **CUSTOMER SERVICE**: Although it’s difficult for airports to build up a personal relationship with passengers, providing exceptional customer service should always be a priority. Good costumer service keeps passenger demands/needs in check.
-
-## App Objective
-The objective of this App is to provide solutions to the common problems faced at airports.
--- In majorly all airport there are mainly 4 check points. We will develop a Navigation System around these checkpoints to make our app interactive and help people in the check-in process.
--- Generate QR codes for every individual Baggage which can be scanned by any passenger or airport authority showing the information regarding to whom the lost baggage belongs to and email the location and relevant information to the owner about his baggage. This QR will also help the relevant authorities find the passenger and in a few minutes the passenger can be uniquely identified, and the relevant processes can be executed with more ease and less effort
-
--A unique ID will be generated when a person enters the airport and at every checkpoint the passenger can scan the QR code which will notify the airline about his most recent whereabouts i.e. if he has reached the airport lounge or he is late etc.
--- Every check point will have a QR code which can be scanned from the QR code scanner available in the app to keep a track of the check points. Scanning regularly and arriving on time will be recognized by awards like food coupons and vouchers.
-
--- Help Desk to ask for help whenever required.
--- Report unknown baggage and security threats.
-
-
-## App Implementation
-- React Native framework to natively-render the application for both iOS and Android.
-- JSON Web Tokens to generate secure QR codes to physically authenticate luggage and their owners.
+# Problem We Plan to Solve
+## TROUBLE WITH BAGGAGE:
+- Lost baggage is a common complaint people have at airport. There is a lot of pressure on the current, outdated baggage handling system, which is why airports need to start looking into more modern baggage solutions.
+# App Objective
+- **Generate QR codes for every individual Baggage** which can be scanned by any passenger or airport authority showing the information regarding to whom the lost baggage belongs to and email the location and relevant information to the owner about his/her baggage. This QR will also help the relevant authorities find the passenger and in a few minutes the passenger can be uniquely identified, and the relevant processes can be executed with more ease and less effort
+# App Implementation
+- The Application will be built upon **React Native framework** to natively-render the application for both iOS and Android.
+- **JSON Web Tokens** to generate secure QR codes to physically authenticate luggage and their owners.
 -  The Baggage JWT payload:
 {
   “id”:43782432
    "iat":1516239022
 }
-- RESTful API with NodeJS and Express for passengers as well as staff.
+- A **MongoDB database** to store implement a login and signup procedure for every new user to the Application
+- **RESTful API with NodeJS and Express** for passengers as well as staff.
+## Using azure services
+- The User database can be stored in the **azure cosmos database**
+- The app server can be **hosted on azure**
+- Relevant **machine learning and artificial intelligence can later be implemented** helping the passengers even more like predicting cancellation chances of flights.
 
-
-
-
-
-
-### Using azure services
-
-- The User database can be stored in the azure cosmos database
-- The app can be hosted on azure
-- Relevant machine learning and artificial intelligence can later be implemented helping the passengers even more like predicting cancellation chances of flights.
-
-
-## Result
-
-
-
-## After The Campaign
-
-
+# User Point of view towards the application
+### The user will be offered two options in his dashboard of the app
+			
+1. 			Generate a QR code for his/her baggage: The User can create a QR code for his luggage and stick over it
+2. 			Scan a QR code on the baggage found by him/her: If a user finds a baggage in the vicinity, he/she can scan the QR code notifying the owner about his luggage where -abouts
+3. 			 Send a notification about a lost baggage: The user will also have an option to intimate the relevant airline staff and airport authorities about their lost baggage and the authorities can follow a similar protocol of scanning the QR code and solve the issue
+# Result
+-	A collective sense of responsibility can inculcate in the society wherein everybody can help everyone by doing nothing but scan a QR code.
+### Might be concerns about the application:
+-An obvious question might be that if a bag is left unattended it might get stolen or why should anyone bother to scan a QR code. Well, this is the scene now as well, if a bag is left unattended no body can do anything about it even if they plan to as the initial process is time consuming, by using our application it gives those passengers  a platform who wish and want to help and also the relavant authories to help the owner find their baggage jus by scanning a QR code, as the app grows in its production phase we also plan to in cash points users get when they scan a bag to relevant vouchers and coupons in different e commerce websites, stores, restaurants, etc, giving users another reason to help their fellow passengers and other people on the airport
