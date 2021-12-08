@@ -1,0 +1,19 @@
+{
+  "name": "bial",
+  "version": "1.0.0",
+  "description": "1. Eeshan Mattey [GitHub](https://github.com/Eeshan8503) [LinkedIn](https://linkedin.com/in/eeshan-mattey-1676741b7)\r  2. Rhythm Shandlya [GitHub](https://github.com/rhythmshandlya) [LinkedIn](https://linkedin.com/in/rhythm-shandlya-a1a949201)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eeshan8503/BIAL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eeshan8503/BIAL/issues"
+  },
+  "homepage": "https://github.com/Eeshan8503/BIAL#readme"
+}
