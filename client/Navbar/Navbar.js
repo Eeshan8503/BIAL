@@ -4,12 +4,13 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import Abc from './../TEST/Abc';
 import Def from './../TEST/Def';
+import Dashboard from '../Home/Dashboard';
 const Navbar = () => {
   const Drawer = createDrawerNavigator();
 return (
   // <View style={styles.container}>
   <NavigationContainer >
-  <Drawer.Navigator initialRouteName="Settings" screenOptions={{
+  <Drawer.Navigator initialRouteName="Dashboard" screenOptions={{
     
     drawerStyle: {
       backgroundColor: '#5451D6',
@@ -17,11 +18,25 @@ return (
     },
     headerTitleAlign: 'center',
     headerTitle:  (props) => (
-      <Image
-        style={{ width: 200, height: 50 }}
+      <View
+        style={{
+            flexDirection:"row",
+        }}
+      >
+      <Text
+        style={{
+          textAlignVertical:'center',
+          fontSize:25,
+          color:'white'
+        }}
+      >BIAL GENIE</Text>
+        <Image
         source={require('./../assets/rocket.png')}
         resizeMode='contain'
       />
+
+      </View>
+      
     ),
     headerTintColor: 'white',
     headerStyle: {
@@ -32,7 +47,7 @@ return (
     //   color:'red'
     // }
   }} >
-  <Drawer.Screen name="Settings" component={Def} options={
+  <Drawer.Screen name="Dashboard" component={Dashboard} options={
     {
       drawerLabelStyle:{
         color:'white',
