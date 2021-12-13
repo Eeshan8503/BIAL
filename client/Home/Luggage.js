@@ -16,6 +16,7 @@ const Luggage = () => {
             }}>ID: 78bhawef872t37</Text>
         </View>
         <View style={{
+            marginTop:5,
             height:80,
             width:80,
             justifyContent:'center',

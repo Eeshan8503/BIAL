@@ -5,16 +5,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import Abc from './../TEST/Abc';
 import Def from './../TEST/Def';
 import Dashboard from '../Home/Dashboard';
+import History from '../Home/History';
 const Navbar = () => {
   const Drawer = createDrawerNavigator();
 return (
   // <View style={styles.container}>
   <NavigationContainer >
   <Drawer.Navigator initialRouteName="Dashboard" screenOptions={{
-    
     drawerStyle: {
       backgroundColor: '#5451D6',
-      width: '50%',
+      width: '75%',
     },
     headerTitleAlign: 'center',
     headerTitle:  (props) => (
@@ -38,6 +38,7 @@ return (
       </View>
       
     ),
+    
     headerTintColor: 'white',
     headerStyle: {
     backgroundColor: '#5451D6', //Set Header color
@@ -47,16 +48,36 @@ return (
     //   color:'red'
     // }
   }} >
+  <Drawer.Screen name="Gajodhar Singh" component={Def} options={
+    {
+      drawerLabelStyle:{
+        color:'white',
+        fontSize:20,
+      },
+      drawerIcon: () => (
+      <Image
+        source={require('./../assets/pp.png')}
+        style={{height:40, width:40, borderRadius:25,margin:0}}
+        
+      />
+    ),
+    }
+  } />
   <Drawer.Screen name="Dashboard" component={Dashboard} options={
     {
       drawerLabelStyle:{
         color:'white',
-        
-        
       }
     }
   } />
-  <Drawer.Screen name="Home" component={Abc} options={
+  <Drawer.Screen name="History" component={History} options={
+    {
+      drawerLabelStyle:{
+        color:'white'
+      }
+    }
+  } />
+  <Drawer.Screen name="Scan QR Code" component={History} options={
     {
       drawerLabelStyle:{
         color:'white'
