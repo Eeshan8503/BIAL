@@ -57,8 +57,7 @@ return (
       drawerIcon: () => (
       <Image
         source={require('./../assets/pp.png')}
-        style={{height:40, width:40, borderRadius:25,margin:0}}
-        
+        style={{height:40, width:40, borderRadius:25,margin:0}} 
       />
     ),
     }

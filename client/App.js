@@ -1,15 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View,Image,SafeAreaView } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import Navbar from './Navbar/Navbar';
-import Dashboard from './Home/Dashboard';
-import Home from './Home/Home';
+import { createStackNavigator } from "react-navigation-stack";
+import {createAppContainer} from 'react-navigation';
 
-export default function App() {
-return (
-<Navbar/>
-);
-}
+import Home from './Home/Home';
+import Login from './Home/Login';
+const RootStack=createStackNavigator({
+    Home:Home,
+    Login:Login
+})
+const Appp = createAppContainer(RootStack);
+class App extends React.Component {
+    render() {
+      return <RootStack />;
+    }
+  }
+  export default createAppContainer(RootStack);

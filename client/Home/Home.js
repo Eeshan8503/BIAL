@@ -1,7 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View,Image,SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View,Image,SafeAreaView, Button} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-const Home = () => {
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
+// import { createStackNavigator } from "react-navigation-stack";
+import Login from './Login';
+
+const Home = ({navigation}) => {
     return (
         <SafeAreaView style={styles.container}>
           <Image source={require('./../assets/rock.png')}/>
@@ -41,17 +46,18 @@ const Home = () => {
             textAlign:"center"
           }}
           >Track luggage. Find lost luggage. Report unknown luggage</Text>
-          <View
-          style={{
+          <TouchableOpacity style={{
             margin:90,
             height:80,
-            width: '75%',
+            width: 300,
             backgroundColor:'#5451D6',
             justifyContent:"center",
             alignContent:'center',
             borderRadius:25
           }}
+          // onPress={()=>this.props.navigation.navigate('Login')}
           >
+          <View>
             <Text
             style={{
               textAlign:'center',
@@ -59,7 +65,11 @@ const Home = () => {
               fontSize:25
             }}
             >Get Started</Text>
+            <Button title='sasa' 
+           onPress={()=>navigation.navigate('Login')}  
+            ></Button>
           </View>
+          </TouchableOpacity>
           </LinearGradient>
           </View>
         </SafeAreaView>
