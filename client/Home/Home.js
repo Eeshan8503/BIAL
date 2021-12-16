@@ -55,7 +55,7 @@ const Home = ({navigation}) => {
             alignContent:'center',
             borderRadius:25
           }}
-          // onPress={()=>this.props.navigation.navigate('Login')}
+          onPress={()=>navigation.navigate('Login')}
           >
           <View>
             <Text
@@ -65,9 +65,7 @@ const Home = ({navigation}) => {
               fontSize:25
             }}
             >Get Started</Text>
-            <Button title='sasa' 
-           onPress={()=>navigation.navigate('Login')}  
-            ></Button>
+           
           </View>
           </TouchableOpacity>
           </LinearGradient>
@@ -83,7 +81,7 @@ const Home = ({navigation}) => {
         alignItems: 'center',
         justifyContent: 'center',
         height:1000,
-        marginTop:'15%'
+        paddingTop:150
       },
     });
     

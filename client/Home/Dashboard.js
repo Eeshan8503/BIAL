@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View,Image } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import Luggage from './Luggage'
+import Navbar from '../Navbar/Navbar'
 export default function Dashboard(props) {
     return (
         <ScrollView>
