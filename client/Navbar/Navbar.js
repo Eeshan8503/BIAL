@@ -6,6 +6,7 @@ import Abc from './../TEST/Abc';
 import Def from './../TEST/Def';
 import Dashboard from '../Home/Dashboard';
 import History from '../Home/History';
+import Scanner from './../Home/Scanner'
 const Navbar = () => {
   const Drawer = createDrawerNavigator();
 return (
@@ -76,7 +77,7 @@ return (
       }
     }
   } />
-  <Drawer.Screen name="Scan QR Code" component={History} options={
+  <Drawer.Screen name="Scan QR Code" component={Scanner} options={
     {
       drawerLabelStyle:{
         color:'white'
