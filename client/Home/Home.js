@@ -47,7 +47,7 @@ const Home = ({navigation}) => {
           }}
           >Track luggage. Find lost luggage. Report unknown luggage</Text>
           <TouchableOpacity style={{
-            margin:90,
+            margin:'10%',
             height:80,
             width: 300,
             backgroundColor:'#5451D6',
@@ -81,7 +81,7 @@ const Home = ({navigation}) => {
         alignItems: 'center',
         justifyContent: 'center',
         height:1000,
-        paddingTop:150
+        paddingTop:'20%'
       },
     });
     
