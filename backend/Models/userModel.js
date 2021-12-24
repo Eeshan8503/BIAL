@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const { isEmail, isURL } = require('validator');
-const bcrypt = require('bcrypt');
-const { dps, covers } = require('./../Data/dp_default');
+// const { isEmail, isURL } = require('validator');
+// const bcrypt = require('bcrypt');
+// const { dps, covers } = require('./../Data/dp_default');
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -12,14 +12,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique: true,
     required: [true, 'Please enter your email!'],
-    validate: [isEmail, 'Please provide valid Email']
-  },
-  dp: {
-    type: String,
-    validate: [isURL, 'Please provide valid URL to your profile picture'],
-    default: function () {
-      return dps[~~(dps.length * Math.random())];
-    }
+    // validate: [isEmail, 'Please provide valid Email']
   },
   role: {
     type: String,
@@ -92,4 +85,4 @@ const userSchema = new mongoose.Schema({
 //   return false;
 // };
 
-// module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('user', userSchema);
