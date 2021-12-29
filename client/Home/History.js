@@ -4,12 +4,12 @@ import { ScrollView } from 'react-native-gesture-handler'
 import Luggage from './Luggage'
 import api from './../Utils/api';
 const History = () => {
-    const response={
-        "name":"eeshan",
-        "email":"abcdfdsdsndj@gmail.com",
-        "password":"12345678",
-        "confirmPassword":"12345678"
-    }
+    // const response={
+    //     "name":"eeshan",
+    //     "email":"abcdfdsdssasndj@gmail.com",
+    //     "password":"12345678",
+    //     "confirmPassword":"12345678"
+    // }
     // async function a(){
     //     const t= await api.post('/user/signup',response);
     //     console.log(t.data);
