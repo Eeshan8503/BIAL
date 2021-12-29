@@ -41,7 +41,7 @@ export default function Dashboard(props) {
                 fontSize: 20,
               }}
             >
-              Gajodar Singh
+              Test Singh
             </Text>
             <Text
               style={{
@@ -50,7 +50,7 @@ export default function Dashboard(props) {
                 color: "grey",
               }}
             >
-              gajodarsingh@gmail.com
+              test@bial.app
             </Text>
           </View>
         </View>

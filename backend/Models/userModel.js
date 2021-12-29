@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 // const { isEmail, isURL } = require('validator');
 // const bcrypt = require('bcrypt');
 // const { dps, covers } = require('./../Data/dp_default');
@@ -6,44 +6,18 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Please enter your name!']
+    required: [true, "Please enter your name!"],
   },
   email: {
     type: String,
     unique: true,
-    required: [true, 'Please enter your email!'],
+    required: [true, "Please enter your email!"],
     // validate: [isEmail, 'Please provide valid Email']
   },
-  role: {
-    type: String,
-    enum: ['admin', 'mod', 'user'],
-    default: 'user'
+  isTravelling: {
+    type: Boolean,
+    default: false,
   },
-  password: {
-    type: String,
-    required: [true, 'Please enter a password'],
-    minLength: 8,
-    select: false
-  },
-  confirmPassword: {
-    type: String,
-    required: [true, 'Please confirm the password'],
-    //This validator will work on SAVE or CREATE
-    validate: {
-      validator: function (el) {
-        return el === this.password;
-      }
-    }
-  },
-  isTravelling:{
-    type:Boolean
-  },
-  currentLuggage:{
-      type:Array    
-  },
-  luggageHistory:{
-      type:Array  
-  }
 });
 //   passwordChangedAt: Date,
 //   isVerified: {
@@ -85,4 +59,4 @@ const userSchema = new mongoose.Schema({
 //   return false;
 // };
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model("user", userSchema);
