@@ -7,9 +7,21 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
+
+// import { LinearGradient } from "react-native-svg";
 
 const Login = ({ navigation }) => {
   return (
+    <LinearGradient
+            // Background Linear Gradient
+            colors={['#44369E','#0B0733']}
+            style={{
+              height:'100%',
+              width:'100%',
+              alignItems: 'center',
+            }}
+          >
     <View style={styles.container}>
       <Text
         style={{
@@ -48,7 +60,7 @@ const Login = ({ navigation }) => {
         }}
         secureTextEntry={true}
       />
-      <TouchableOpacity onPress={() => navigation.navigate("Dashboard")}>
+      <TouchableOpacity onPress={() => navigation.navigate("Welcome")}>
         <View
           style={{
             marginTop: 50,
@@ -72,6 +84,7 @@ const Login = ({ navigation }) => {
         </View>
       </TouchableOpacity>
     </View>
+    </LinearGradient>
   );
 };
 
@@ -81,7 +94,7 @@ const styles = StyleSheet.create({
   container: {
     height: "100%",
     width: "100%",
-    backgroundColor: "#5451D6",
+    // backgroundColor: "#5451D6",
     alignItems: "center",
   },
 });

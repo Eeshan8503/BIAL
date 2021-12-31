@@ -5,6 +5,9 @@ import {createAppContainer} from 'react-navigation';
 import Home from './Home/Home';
 import Login from './Home/Login';
 import Navbar from './Navbar/Navbar';
+import Welcome from './Home/Welcome';
+import History from './Home/History';
+import TripHistory from './Home/TripHistory';
 const RootStack=createStackNavigator({
   Home: {
     screen: Home, 
@@ -17,14 +20,34 @@ const RootStack=createStackNavigator({
       navigationOptions: {
         headerShown: false,
     }, 
-
     },
     Dashboard:{
       screen: Navbar, 
       navigationOptions: {
           headerShown: false,
       }, 
-    }
+    },
+    Welcome:{
+      screen: Welcome, 
+      navigationOptions: {
+          headerShown: false,
+      }, 
+    },
+    History:{
+      screen: TripHistory, 
+      navigationOptions: {
+          headerShown: true,
+      }, 
+    },
+    BagHistory:{
+      screen: History, 
+      navigationOptions: {
+          headerShown: true,
+      }, 
+      headerStyle: {
+        backgroundColor: '#44369E'
+     }
+    },
 });
 class App extends React.Component {
     render() {

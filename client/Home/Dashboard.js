@@ -4,6 +4,21 @@ import { ScrollView } from "react-native-gesture-handler";
 import Luggage from "./Luggage";
 export default function Dashboard(props) {
   return (
+    <View>
+    <View style={{
+      position:'absolute',
+      zIndex:3,
+      height:100,
+      width:100,
+      backgroundColor:'#44369E',
+      bottom:10,
+      right:20,
+      borderRadius:50,
+      alignItems:'center',
+      justifyContent:'center'
+    }}>
+      <Text style={{fontSize:50,color:'white'}}>+</Text>
+    </View>
     <ScrollView>
       <View style={styles.conatiner}>
         <Text
@@ -76,6 +91,7 @@ export default function Dashboard(props) {
         <Luggage />
       </View>
     </ScrollView>
+    </View>
   );
 }
 
