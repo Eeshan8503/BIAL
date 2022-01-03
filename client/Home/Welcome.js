@@ -48,28 +48,7 @@ export default function Welcome({navigation}) {
            
           </View>
           </TouchableOpacity>
-          <TouchableOpacity style={{
-            marginTop:'5%',
-            height:80,
-            width: 300,
-            backgroundColor:'#5451D6',
-            justifyContent:"center",
-            alignContent:'center',
-            borderRadius:25
-          }}
-          onPress={()=>navigation.navigate('History')}
-          >
-          <View>
-            <Text
-            style={{
-              textAlign:'center',
-              color:'white',
-              fontSize:25
-            }}
-            >History</Text>
-           
-          </View>
-          </TouchableOpacity>
+          
         </View>
         </LinearGradient>
     )
