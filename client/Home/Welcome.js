@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
-import Navbar from '../Navbar/Navbar'
 import { LinearGradient } from 'expo-linear-gradient';
 export default function Welcome({navigation}) {
     return (
@@ -14,7 +13,7 @@ export default function Welcome({navigation}) {
           
         }}
       >
-        <View style={styles.container}>
+      <View style={styles.container}>
             <Image
             source={require("./../assets/pp.png")}
             style={{
@@ -45,7 +44,6 @@ export default function Welcome({navigation}) {
               fontSize:25
             }}
             >Start new Trip +</Text>
-           
           </View>
           </TouchableOpacity>
           

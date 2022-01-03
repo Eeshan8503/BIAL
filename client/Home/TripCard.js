@@ -5,23 +5,27 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 const TripCard = ({navigation}) => {
     return (
        
-        <TouchableOpacity onPress={()=>navigation.navigate('BagHistory')} >
-        <LinearGradient
+        <TouchableOpacity onPress={()=>navigation.navigate('BagHistory')} style={{backgroundColor:'#5451D6',height:200,
+              width:400,
+              marginTop:50,
+              justifyContent:'center',
+              borderRadius:50}} >
+        {/* <LinearGradient
             // Background Linear Gradient
             colors={['#0B0733', '#44369E']}
             style={{
-              height:275,
-              width:350,
+              height:200,
+              width:300,
               marginTop:50,
               justifyContent:'center',
               borderRadius:50
             }}
-          >
+          > */}
         
             <Text style={
                 {
                     color:'white',
-                    fontSize:50,
+                    fontSize:40,
                     textAlign:'left',
                     marginLeft:30
                 }
@@ -29,32 +33,30 @@ const TripCard = ({navigation}) => {
         <Text style={
                 {
                     color:'white',
-                    fontSize:30,
+                    fontSize:20,
                     textAlign:'left',
                     marginLeft:30,
                 }
             }>Date: 27/1/2022</Text>
              <Text style={
-                {
-                    color:'white',
-                    fontSize:30,
-                    textAlign:'left',
-                    marginLeft:30
-                }
+               style.text
             }>From:Bangalore</Text>
              <Text style={
-                {
-                    color:'white',
-                    fontSize:30,
-                    textAlign:'left',
-                    marginLeft:30
-                }
+               style.text
             }>To:Patna</Text>
-          </LinearGradient>
+          {/* </LinearGradient> */}
         </TouchableOpacity>
         
     )
 }
+const style=StyleSheet.create({
+    text:{
+                     color:'white',
+                    fontSize:20,
+                    textAlign:'left',
+                    marginLeft:30
+    }
+})
 
 export default TripCard;
 

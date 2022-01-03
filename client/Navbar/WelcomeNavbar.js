@@ -5,10 +5,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import Def from "./../TEST/Def";
 import Dashboard from "../Home/Dashboard";
 import History from "../Home/History";
+import TripHistory from "../Home/TripHistory";
 import Scanner from "./../Home/Scanner";
 import Qrgenerator from "../Home/Qrgenerator";
 import Welcome from "../Home/Welcome";
-const Navbar = () => {
+const Navbar = ({navigation}) => {
   const Drawer = createDrawerNavigator();
   return (
     // <View style={styles.container}>
@@ -71,7 +72,9 @@ const Navbar = () => {
         
         <Drawer.Screen
           name="Start trip"
-          component={Welcome}
+          component={() => <Welcome 
+          navigation={navigation}
+          />}
           options={{
             drawerLabelStyle: {
               color: "white",
@@ -80,7 +83,9 @@ const Navbar = () => {
         />
         <Drawer.Screen
           name="History"
-          component={History}
+          component={() => <TripHistory 
+          navigation={navigation}
+          />}
           options={{
             drawerLabelStyle: {
               color: "white",

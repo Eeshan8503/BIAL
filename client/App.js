@@ -8,6 +8,7 @@ import Navbar from './Navbar/Navbar';
 import Welcome from './Home/Welcome';
 import History from './Home/History';
 import TripHistory from './Home/TripHistory';
+import TripCard from './Home/TripCard';
 import WelcomeNav from './Navbar/WelcomeNavbar'
 const RootStack=createStackNavigator({
   Home: {
