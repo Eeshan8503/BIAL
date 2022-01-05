@@ -34,7 +34,7 @@ export default function Welcome({navigation}) {
             alignContent:'center',
             borderRadius:25
           }}
-          onPress={()=>navigation.navigate('Dashboard')}
+          onPress={()=>navigation.navigate('Trip')}
           >
           <View>
             <Text

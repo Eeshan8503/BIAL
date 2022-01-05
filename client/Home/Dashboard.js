@@ -1,11 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Luggage from "./Luggage";
-export default function Dashboard(props) {
+export default function Dashboard({route}) {
+  console.log(route.params)
   return (
+
     <View>
-    <View style={{
+    <TouchableOpacity style={{
       position:'absolute',
       zIndex:3,
       height:100,
@@ -16,9 +18,11 @@ export default function Dashboard(props) {
       borderRadius:50,
       alignItems:'center',
       justifyContent:'center'
-    }}>
+    }} onPress={()=>alert('clicked')}>
+    <View >
       <Text style={{fontSize:50,color:'white'}}>+</Text>
     </View>
+    </TouchableOpacity>
     <ScrollView>
       <View style={styles.conatiner}>
         <Text
@@ -70,7 +74,7 @@ export default function Dashboard(props) {
           </View>
         </View>
         <Text style={[styles.txt, { marginTop: 20 }]}>{`PNR: ${
-          props.name || "XYZHSY"
+           "XYZHSY"
         }`}</Text>
         <Text style={styles.txt}>From: Patna</Text>
         <Text style={styles.txt}>To: Bangalore</Text>
