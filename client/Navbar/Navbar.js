@@ -7,6 +7,7 @@ import Dashboard from "../Home/Dashboard";
 import History from "../Home/History";
 import Scanner from "./../Home/Scanner";
 import Qrgenerator from "../Home/Qrgenerator";
+import LuggageForm from './../Home/LuggageForm'
 const Navbar = () => {
   const Drawer = createDrawerNavigator();
   return (
@@ -102,6 +103,17 @@ const Navbar = () => {
               color: "white",
             },
           }}
+        />
+        <Drawer.Screen
+          name="add luggage"
+          component={LuggageForm}
+          options={{
+            drawerLabelStyle: {
+              color: "white",
+            },
+            drawerLabel:()=> null,
+          }}
+          
         />
       </Drawer.Navigator>
     </NavigationContainer>

@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Luggage from "./Luggage";
-export default function Dashboard({route}) {
+export default function Dashboard({route,navigation}) {
   console.log(route.params)
   return (
 
@@ -18,7 +18,7 @@ export default function Dashboard({route}) {
       borderRadius:50,
       alignItems:'center',
       justifyContent:'center'
-    }} onPress={()=>alert('clicked')}>
+    }} onPress={()=>navigation.navigate('add luggage')}>
     <View >
       <Text style={{fontSize:50,color:'white'}}>+</Text>
     </View>

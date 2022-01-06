@@ -26,12 +26,6 @@ const RootStack=createStackNavigator({
         headerShown: false,
     },
 },
-LuggageForm: {
-  screen: LuggageForm, 
-  navigationOptions: {
-      headerShown: true,
-  },
-},
     Login:{
       screen:Login,
       navigationOptions: {
