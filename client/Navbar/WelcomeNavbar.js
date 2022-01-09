@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import Def from './../TEST/Def';
-s;
 import TripHistory from '../Home/TripHistory';
 import Scanner from './../Home/Scanner';
 import Welcome from '../Home/Welcome';
