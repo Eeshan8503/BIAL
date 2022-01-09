@@ -1,15 +1,15 @@
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { NavigationContainer } from "@react-navigation/native";
-import Def from "./../TEST/Def";
-import Dashboard from "../Home/Dashboard";
-import History from "../Home/History";
-import TripHistory from "../Home/TripHistory";
-import Scanner from "./../Home/Scanner";
-import Qrgenerator from "../Home/Qrgenerator";
-import Welcome from "../Home/Welcome";
-const Navbar = ({navigation}) => {
+import React from 'react';
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import Def from './../TEST/Def';
+import Dashboard from '../Home/Dashboard';
+import History from '../Home/History';
+import TripHistory from '../Home/TripHistory';
+import Scanner from './../Home/Scanner';
+import Welcome from '../Home/Welcome';
+const Navbar = ({ navigation }) => {
+  console.disableYellowBox = true;
   const Drawer = createDrawerNavigator();
   return (
     // <View style={styles.container}>
@@ -18,36 +18,36 @@ const Navbar = ({navigation}) => {
         initialRouteName="Start trip"
         screenOptions={{
           drawerStyle: {
-            backgroundColor: "#5451D6",
-            width: "75%",
+            backgroundColor: '#5451D6',
+            width: '75%'
           },
-          headerTitleAlign: "center",
+          headerTitleAlign: 'center',
           headerTitle: (props) => (
             <View
               style={{
-                flexDirection: "row",
+                flexDirection: 'row'
               }}
             >
               <Text
                 style={{
-                  textAlignVertical: "center",
+                  textAlignVertical: 'center',
                   fontSize: 25,
-                  color: "white",
+                  color: 'white'
                 }}
               >
                 BIAL GENIE
               </Text>
               <Image
-                source={require("./../assets/rocket.png")}
+                source={require('./../assets/rocket.png')}
                 resizeMode="contain"
               />
             </View>
           ),
 
-          headerTintColor: "white",
+          headerTintColor: 'white',
           headerStyle: {
-            backgroundColor: "#5451D6", //Set Header color
-          },
+            backgroundColor: '#5451D6' //Set Header color
+          }
           // drawerIcon:{
           //   color:'red'
           // }
@@ -58,38 +58,34 @@ const Navbar = ({navigation}) => {
           component={Def}
           options={{
             drawerLabelStyle: {
-              color: "white",
-              fontSize: 20,
+              color: 'white',
+              fontSize: 20
             },
             drawerIcon: () => (
               <Image
-                source={require("./../assets/pp.png")}
+                source={require('./../assets/pp.png')}
                 style={{ height: 40, width: 40, borderRadius: 25, margin: 0 }}
               />
-            ),
+            )
           }}
         />
-        
+
         <Drawer.Screen
           name="Start trip"
-          component={() => <Welcome 
-          navigation={navigation}
-          />}
+          component={() => <Welcome navigation={navigation} />}
           options={{
             drawerLabelStyle: {
-              color: "white",
-            },
+              color: 'white'
+            }
           }}
         />
         <Drawer.Screen
           name="History"
-          component={() => <TripHistory 
-          navigation={navigation}
-          />}
+          component={() => <TripHistory navigation={navigation} />}
           options={{
             drawerLabelStyle: {
-              color: "white",
-            },
+              color: 'white'
+            }
           }}
         />
         <Drawer.Screen
@@ -97,8 +93,8 @@ const Navbar = ({navigation}) => {
           component={Scanner}
           options={{
             drawerLabelStyle: {
-              color: "white",
-            },
+              color: 'white'
+            }
           }}
         />
       </Drawer.Navigator>
@@ -109,12 +105,12 @@ const Navbar = ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#5451D6",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#5451D6',
+    alignItems: 'center',
+    justifyContent: 'center',
     height: 100,
-    zIndex: -1,
-  },
+    zIndex: -1
+  }
 });
 
 export default Navbar;

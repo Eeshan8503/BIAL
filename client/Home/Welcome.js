@@ -1,9 +1,24 @@
-<<<<<<< HEAD
-import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import Navbar from '../Navbar/Navbar';
+import React, { useEffect } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  TextInput
+} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import api from './../Utils/api';
 export default function Welcome({ navigation }) {
+  useEffect(() => {
+    const fetchMyApi = async () => {
+      const res = await api.get('/user', { withCredentials: true });
+      if (res.data.user.isTravelling) {
+        navigation.navigate('Dashboard');
+      }
+    };
+    fetchMyApi();
+  }, []);
   return (
     <LinearGradient
       // Background Linear Gradient
@@ -22,8 +37,7 @@ export default function Welcome({ navigation }) {
             width: 150,
             borderWidth: 5,
             borderColor: 'grey',
-            borderRadius: 90,
-            marginLeft: 20
+            borderRadius: 90
           }}
         />
         <View
@@ -41,26 +55,6 @@ export default function Welcome({ navigation }) {
             Email: test@bial.app
           </Text>
           <Text
-=======
-import React from 'react'
-import { StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient';
-export default function Welcome({navigation}) {
-    return (
-        <LinearGradient
-        // Background Linear Gradient
-        colors={['#44369E','#0B0733']}
-        style={{
-          height:'100%',
-          width:'100%',
-          alignItems: 'center',
-          
-        }}
-      >
-      <View style={styles.container}>
-            <Image
-            source={require("./../assets/pp.png")}
->>>>>>> d977927a6d774c8a828e8f8989a8bc4d0462847a
             style={{
               marginTop: 20,
               fontSize: 20,
@@ -70,10 +64,48 @@ export default function Welcome({navigation}) {
             Name: Test Singh
           </Text>
         </View>
-
+        <TextInput
+          placeholder="From"
+          placeholderTextColor="white"
+          style={{
+            height: 40,
+            width: '75%',
+            borderWidth: 1,
+            borderColor: 'white',
+            margin: 15,
+            padding: 10,
+            color: 'white'
+          }}
+        />
+        <TextInput
+          placeholder="To"
+          placeholderTextColor="white"
+          style={{
+            height: 40,
+            width: '75%',
+            borderWidth: 1,
+            borderColor: 'white',
+            margin: 15,
+            padding: 10,
+            color: 'white'
+          }}
+        />
+        <TextInput
+          placeholder="PNR"
+          placeholderTextColor="white"
+          style={{
+            height: 40,
+            width: '75%',
+            borderWidth: 1,
+            borderColor: 'white',
+            margin: 15,
+            padding: 10,
+            color: 'white'
+          }}
+        />
         <TouchableOpacity
           style={{
-            marginTop: '10%',
+            marginTop: '5%',
             height: 80,
             width: 300,
             backgroundColor: '#5451D6',
@@ -81,8 +113,15 @@ export default function Welcome({navigation}) {
             alignContent: 'center',
             borderRadius: 25
           }}
-<<<<<<< HEAD
-          onPress={() => navigation.navigate('Dashboard')}
+          onPress={async () => {
+            const res = await api.patch('user/startTrip', {
+              to: 'Kolkata',
+              form: 'Bengaluru',
+              pnr: '9362403459298'
+            });
+            console.log(res.data);
+            navigation.navigate('Dashboard');
+          }}
         >
           <View>
             <Text
@@ -92,20 +131,8 @@ export default function Welcome({navigation}) {
                 fontSize: 25
               }}
             >
-              Start new Trip +
+              Start new Trip
             </Text>
-=======
-          onPress={()=>navigation.navigate('Trip')}
-          >
-          <View>
-            <Text
-            style={{
-              textAlign:'center',
-              color:'white',
-              fontSize:25
-            }}
-            >Start new Trip +</Text>
->>>>>>> d977927a6d774c8a828e8f8989a8bc4d0462847a
           </View>
         </TouchableOpacity>
       </View>

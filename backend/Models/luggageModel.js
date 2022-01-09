@@ -1,19 +1,22 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const luggageSchema = new mongoose.Schema({
   owner: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true
+    required: true,
   },
-  token: {
-    type: String
+  token: String,
+  description: String,
+  color: String,
+  weight: String,
+  lost: {
+    type: Boolean,
+    default: false,
   },
-  color: {
-    type: String
+  image: {
+    data: Buffer,
+    contentType: String,
   },
-  images: {
-    type: Array
-  }
 });
 
-module.exports = mongoose.model('luggage', luggageSchema);
+module.exports = mongoose.model("luggage", luggageSchema);

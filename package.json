@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Eeshan8503/BIAL/issues"
   },
-  "homepage": "https://github.com/Eeshan8503/BIAL#readme"
+  "homepage": "https://github.com/Eeshan8503/BIAL#readme",
+  "dependencies": {
+    "nodemailer": "^6.7.2"
+  }
 }

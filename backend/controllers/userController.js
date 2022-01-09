@@ -1,5 +1,5 @@
-const User = require('./../Models/userModel');
-const Luggage = require('./../Models/luggageModel');
+const User = require('../Models/userModel');
+const Luggage = require('../Models/luggageModel');
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 
@@ -17,7 +17,6 @@ exports.getUser = async (req, res) => {
   });
 };
 
-//More like Update Trip
 exports.startTrip = async (req, res) => {
   const date = new Date();
   req.body.date = date.toDateString();
@@ -40,6 +39,7 @@ exports.endTrip = async (req, res) => {
   if (user.currentTrip) {
     user.tripHistory.push(user.currentTrip);
     user.currentTrip.remove();
+    user.isTravelling = false;
     const newUser = await user.save();
     return res.status(200).json({
       status: true,
@@ -57,13 +57,14 @@ exports.addLuggage = async (req, res) => {
   console.log(req.body);
   const newLuggage = await Luggage.create({
     ...req.body,
-    owner: user._id
+    owner: '61d33af1c50efe0cf3d60989'
   });
   const token = getJwt(
     newLuggage._id,
     process.env.JWT_KEY,
     process.env.JWT_EXPIRY
   );
+  console.log(token);
   newLuggage.token = token;
   user.currentTrip.luggage.push(newLuggage._id);
   await user.save();
@@ -74,11 +75,12 @@ exports.addLuggage = async (req, res) => {
   });
 };
 
-exports.findLuggage = async (req, res) => {
-  const token = req.body.token;
-  const location = req.body.location;
-  const payLoad = await promisify(jwt.verify)(
-    req.params.token,
-    process.env.JWT_FORGOT_PASS
+exports.getAllLuggage = async (req, res) => {
+  const user = await User.findById('61d33af1c50efe0cf3d60989').populate(
+    'currentTrip.luggage'
   );
+  res.status(200).json({
+    status: true,
+    luggage: user.currentTrip.luggage
+  });
 };
