@@ -3,8 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import Def from './../TEST/Def';
-import Dashboard from '../Home/Dashboard';
-import History from '../Home/History';
+s;
 import TripHistory from '../Home/TripHistory';
 import Scanner from './../Home/Scanner';
 import Welcome from '../Home/Welcome';
@@ -12,7 +11,6 @@ const Navbar = ({ navigation }) => {
   console.disableYellowBox = true;
   const Drawer = createDrawerNavigator();
   return (
-    // <View style={styles.container}>
     <NavigationContainer>
       <Drawer.Navigator
         initialRouteName="Start trip"
