@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 export default axios.create({
-  baseURL: `http://${process.env.IP}:8000/api/v1`
+  baseURL: `https://geniebial360-bial.azurewebsites.net/api/v1`
 });

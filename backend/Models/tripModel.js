@@ -6,7 +6,7 @@ exports.tripSchema = new mongoose.Schema({
   pnr: String,
   date: Date,
   luggage: {
-    type: [mongoose.Schema.Types.ObjectId],
+    type: [{ type: mongoose.Schema.ObjectId, ref: 'luggage' }],
     default: []
   }
 });
