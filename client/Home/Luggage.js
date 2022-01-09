@@ -73,7 +73,6 @@ const Luggage = ({ details }) => {
           const res = await api.patch(`/luggage/${details._id}`, {
             lost: !report
           });
-          console.log(res.data);
           if (res.data.status) setReport(!report);
         }}
       >

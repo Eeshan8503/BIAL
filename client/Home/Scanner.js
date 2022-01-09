@@ -85,7 +85,6 @@ export default function App() {
               setReq('');
               setText('Reported Successfully');
               setScanned(false);
-              console.log(res.data);
             }}
           />
         )}

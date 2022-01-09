@@ -1,4 +1,4 @@
 import axios from 'axios';
 export default axios.create({
-  baseURL: `https://bial-new.herokuapp.com/api/v1`
+  baseURL: `https://geniebial360-bial.azurewebsites.net/api/v1`
 });

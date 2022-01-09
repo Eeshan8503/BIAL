@@ -119,7 +119,6 @@ export default function Welcome({ navigation }) {
               form: 'Bengaluru',
               pnr: '9362403459298'
             });
-            console.log(res.data);
             navigation.navigate('Dashboard');
           }}
         >

@@ -29,7 +29,6 @@ const TripForm = ({ navigation }) => {
     if (result.cancelled) {
       return;
     }
-    console.log(result);
     let localUri = result.uri;
     let filename = localUri.split('/').pop();
 

@@ -122,7 +122,6 @@ export default function Dashboard({ route, navigation }) {
           <TouchableOpacity
             onPress={async () => {
               const res = await api.post('/user/endTrip');
-              console.log(res.data);
             }}
           >
             <View

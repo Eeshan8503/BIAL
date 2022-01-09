@@ -54,7 +54,6 @@ exports.endTrip = async (req, res) => {
 
 exports.addLuggage = async (req, res) => {
   const user = await User.findById('61d33af1c50efe0cf3d60989');
-  console.log(req.body);
   const newLuggage = await Luggage.create({
     ...req.body,
     owner: '61d33af1c50efe0cf3d60989'
@@ -64,7 +63,6 @@ exports.addLuggage = async (req, res) => {
     process.env.JWT_KEY,
     process.env.JWT_EXPIRY
   );
-  console.log(token);
   newLuggage.token = token;
   user.currentTrip.luggage.push(newLuggage._id);
   await user.save();
