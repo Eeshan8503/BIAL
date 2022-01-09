@@ -54,6 +54,7 @@ const Navbar = () => {
       >
         <Drawer.Screen
           name="Test Singh"
+          component={Dashboard}
           options={{
             drawerLabelStyle: {
               color: 'white',

@@ -17,7 +17,7 @@ export default function Dashboard({ route, navigation }) {
   }, [isFocused]);
 
   return (
-    <View>
+    <View style={{height:'100%'}}>
       <TouchableOpacity
         style={{
           position: 'absolute',
@@ -25,10 +25,11 @@ export default function Dashboard({ route, navigation }) {
           height: 70,
           width: 70,
           backgroundColor: '#44369E',
-          bottom: -60,
+          bottom: 15,
           right: 20,
           borderRadius: 40,
           alignItems: 'center',
+          alignContent:'center',
           justifyContent: 'center'
         }}
         onPress={() => navigation.navigate('add luggage')}

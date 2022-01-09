@@ -52,6 +52,7 @@ const Navbar = ({ navigation }) => {
       >
         <Drawer.Screen
           name="Test Singh"
+          component={() => <Welcome navigation={navigation} />}
           options={{
             drawerLabelStyle: {
               color: 'white',
