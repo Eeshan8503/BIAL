@@ -1,6 +1,6 @@
 # Team Description
  1. Eeshan Mattey [GitHub](https://github.com/Eeshan8503) [LinkedIn](https://linkedin.com/in/eeshan-mattey-1676741b7)
- 2. Rhythm Shandlya [GitHub](https://github.com/rhythmshandlya) [LinkedIn](https://linkedin.com/in/rhythm-shandlya-a1a949201)
+<!--  2. Rhythm Shandlya [GitHub](https://github.com/rhythmshandlya) [LinkedIn](https://linkedin.com/in/rhythm-shandlya-a1a949201) -->
 
 # Problem We Plan to Solve
 ## TROUBLE WITH BAGGAGE:
